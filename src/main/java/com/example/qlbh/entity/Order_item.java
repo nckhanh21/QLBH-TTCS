@@ -14,11 +14,12 @@ import java.io.Serializable;
 @Table(name = "Order_item")
 public class Order_item implements Serializable {
     @Id
+    @Column(name = "ID")
+    private int id;
     @ManyToOne
     @JoinColumn (name = "Id_belong")
     private Belong belong;
-    @Id
     @ManyToOne
-    @JoinColumn(name="Id_account")
-    private Users users;
+    @JoinColumn(name="Id_order")
+    private User_Order user_order;
 }

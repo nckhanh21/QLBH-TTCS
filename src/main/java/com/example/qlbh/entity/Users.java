@@ -15,6 +15,8 @@ import java.sql.Date;
 @Table(name = "Users")
 public class Users implements Serializable {
     @Id
+    @Column(name = "ID")
+    private int id;
     @JoinColumn(name = "Id_account")
     @OneToOne
     private Account_profile account_profile;

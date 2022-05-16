@@ -14,10 +14,11 @@ import java.io.Serializable;
 @Entity
 public class Click implements Serializable {
     @Id
+    @Column(name = "ID")
+    private int id;
     @ManyToOne
     @JoinColumn(name = "Id_account")
     private Users users;
-    @Id
     @ManyToOne
     @JoinColumn(name = "Id_item")
     private Item_feature_show item_feature_show;

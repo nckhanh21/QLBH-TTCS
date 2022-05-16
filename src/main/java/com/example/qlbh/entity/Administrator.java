@@ -14,6 +14,8 @@ import java.io.Serializable;
 @Table(name = "Administrator")
 public class Administrator implements Serializable {
     @Id
+    @Column(name = "ID")
+    private int id;
     @JoinColumn (name = "Id_account")
     @OneToOne
     private Account_profile account_profile;
